@@ -1,5 +1,9 @@
 # Validation FEACO — 2026-10-02
 
+## Sortie de build Vercel — 2026-11-07
+
+Vercel attend le dossier Next standard `.next`. La configuration FEACO utilisait `.next-feaco` en mode normal ; la sortie normale est maintenant `.next`, tandis que les modes QA gardent leurs répertoires isolés. Le build normal doit être vérifié par la présence de `.next/BUILD_ID`.
+
 ## Fiche de ligue et rattachement des clubs — 2026-11-07
 
 La fiche de ligue n'affiche plus la section tableau des athlètes, qui n'est pas raccordée aux données FEACO territoriales. La fiche conserve ses informations, compteurs, ententes et clubs. Le formulaire de club propose uniquement l'entente ; le parent ligue est rempli depuis l'entente choisie, puis toujours contrôlé côté service. Le formulaire a été ouvert dans le navigateur local et vérifié : aucun champ Ligue n'est présenté.
