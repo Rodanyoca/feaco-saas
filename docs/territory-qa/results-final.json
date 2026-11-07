@@ -1,0 +1,11 @@
+{
+  "source": "test",
+  "checks": [
+    "API : modifications conservees en memoire pour ligue, entente et club ; codes et noms des parents corrects",
+    "Mobile ligues : largeur 390 px et recherche vide visible",
+    "Mobile ententes : largeur 390 px et recherche vide visible",
+    "Mobile clubs : largeur 390 px et recherche vide visible",
+    "Aucune erreur JavaScript sur les trois pages mobiles"
+  ],
+  "errors": []
+}

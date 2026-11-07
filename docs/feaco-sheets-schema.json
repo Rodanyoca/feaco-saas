@@ -1,0 +1,1372 @@
+{
+  "readAt": "2026-11-07",
+  "workbooks": [
+    {
+      "id": "1Kk1Vlr8QeJh-EkKh1pc7ZdxKqc3sOCwG_qzL2N8ZxR4",
+      "title": "00_FEACO_REFERENTIEL",
+      "sheets": [
+        {
+          "name": "TABLEAU_DE_BORD",
+          "sheetId": 889507821,
+          "headers": [
+            "REFERENTIEL FEDERAL - FEACO",
+            "",
+            "ETAT D'AVANCEMENT"
+          ]
+        },
+        {
+          "name": "SEXES",
+          "sheetId": 1965585654,
+          "headers": [
+            "id_sexe",
+            "nom_sexe",
+            "observations"
+          ]
+        },
+        {
+          "name": "PROVINCES",
+          "sheetId": 267799309,
+          "headers": [
+            "id_province",
+            "nom_province"
+          ]
+        },
+        {
+          "name": "SPORT",
+          "sheetId": 2107994273,
+          "headers": [
+            "id_sport",
+            "nom_sport",
+            "description"
+          ]
+        },
+        {
+          "name": "FEDERATION",
+          "sheetId": 108183829,
+          "headers": [
+            "id_federation",
+            "nom_officiel",
+            "sigle",
+            "id_sport",
+            "date_de_creation",
+            "date_affiliation coc",
+            "date_affiliation_caa",
+            "date_affiliation_wa",
+            "siege",
+            "adresse",
+            "ville",
+            "telephone",
+            "email ",
+            "site web",
+            "logo_drive_id",
+            "logo_drive_url"
+          ]
+        },
+        {
+          "name": "DISCIPLINES",
+          "sheetId": 653622608,
+          "headers": [
+            "id_discipline",
+            "id_sport",
+            "nom_discipline",
+            "description"
+          ]
+        },
+        {
+          "name": "EPREUVES",
+          "sheetId": 1453509409,
+          "headers": [
+            "id_epreuve",
+            "id_discipline",
+            "nom_epreuve",
+            "id_type_resultat",
+            "unite_resultat",
+            "type_participation",
+            "observations"
+          ]
+        },
+        {
+          "name": "TYPES_RESULTATS",
+          "sheetId": 143114706,
+          "headers": [
+            "id_type_resultat",
+            "nom_type_resultat",
+            "sens_classement",
+            "observations"
+          ]
+        },
+        {
+          "name": "CATEGORIES_AGE",
+          "sheetId": 2085858335,
+          "headers": [
+            "id_categorie_age",
+            "nom_categorie_age",
+            "age_min",
+            "age_max",
+            "observations"
+          ]
+        },
+        {
+          "name": "TYPES_COMPETITIONS",
+          "sheetId": 1402988311,
+          "headers": [
+            "id_type_competition",
+            "nom_type_competition",
+            "niveau_competition",
+            "format_competition",
+            "observations"
+          ]
+        },
+        {
+          "name": "TYPES_STRUCTURES",
+          "sheetId": 766187314,
+          "headers": [
+            "id_type_structure",
+            "nom_type_structure",
+            "observations"
+          ]
+        },
+        {
+          "name": "CATEGORIES_CLUB",
+          "sheetId": 956435606,
+          "headers": [
+            "id_categorie_club",
+            "nom_categorie_club",
+            "observations"
+          ]
+        },
+        {
+          "name": "SAISON",
+          "sheetId": 1242039128,
+          "headers": [
+            "id_saison",
+            "nom_saison",
+            "observation"
+          ]
+        },
+        {
+          "name": "GRADES_ARBITRES",
+          "sheetId": 910282128,
+          "headers": [
+            "id_grade_arbitre",
+            "nom_grade_arbitre",
+            "observations"
+          ]
+        },
+        {
+          "name": "TYPES_ACTIVITES",
+          "sheetId": 690936519,
+          "headers": [
+            "id_type_activite",
+            "nom_type_activite",
+            "description",
+            "observations"
+          ]
+        },
+        {
+          "name": "STATUTS_ACTIVITES",
+          "sheetId": 1943561504,
+          "headers": [
+            "id_statut_activite",
+            "nom_statut_activite",
+            "description",
+            "observations"
+          ]
+        },
+        {
+          "name": "TYPES_DOCUMENTS",
+          "sheetId": 427855540,
+          "headers": [
+            "id_type_document",
+            "nom_type_document",
+            "description",
+            "observations"
+          ]
+        },
+        {
+          "name": "TYPES_ENTITES_DOCUMENTS",
+          "sheetId": 256360338,
+          "headers": [
+            "id_type_entite_document",
+            "nom_type_entite_document",
+            "source_donnees",
+            "observations"
+          ]
+        },
+        {
+          "name": "TYPES_PHASES",
+          "sheetId": 219495068,
+          "headers": [
+            "id_type_phase",
+            "nom_type_phase",
+            "observations"
+          ]
+        },
+        {
+          "name": "STATUTS_RESULTATS",
+          "sheetId": 835406221,
+          "headers": [
+            "id_statut_resultat",
+            "nom_statut_resultat",
+            "description",
+            "observations"
+          ]
+        },
+        {
+          "name": "TYPES_RECORDS",
+          "sheetId": 105332056,
+          "headers": [
+            "id_type_record",
+            "nom_type_record",
+            "niveau_record",
+            "observations"
+          ]
+        },
+        {
+          "name": "STATUT_HOMOLOGATION",
+          "sheetId": 112363707,
+          "headers": [
+            "id_statut_homologation",
+            "nom_statut_homologation",
+            "observations"
+          ]
+        },
+        {
+          "name": "GOUVERNANCE",
+          "sheetId": 1196201046,
+          "headers": [
+            "id_organe",
+            "nom_organe",
+            "description"
+          ]
+        },
+        {
+          "name": "COMMISSIONS",
+          "sheetId": 1109860550,
+          "headers": [
+            "id_commission",
+            "nom_commission",
+            "domaine",
+            "description"
+          ]
+        },
+        {
+          "name": "PROGRAMMES",
+          "sheetId": 1246533769,
+          "headers": [
+            "id_programme",
+            "nom_programme",
+            "categorie",
+            "description",
+            "public cible"
+          ]
+        },
+        {
+          "name": "PARTENAIRES",
+          "sheetId": 1355013119,
+          "headers": [
+            "id_partenaire",
+            "nom_partenaire",
+            "categorie",
+            "description",
+            "site_web",
+            "statut"
+          ]
+        },
+        {
+          "name": "INSTALATIONS",
+          "sheetId": 109582269,
+          "headers": [
+            "id_installation",
+            "nom",
+            "type",
+            "province",
+            "ville",
+            "proprietaire"
+          ]
+        },
+        {
+          "name": "CONTACTS",
+          "sheetId": 1881182568,
+          "headers": [
+            "id_contact",
+            "service",
+            "email",
+            "telephone"
+          ]
+        },
+        {
+          "name": "RESEAU_SOCIAUX",
+          "sheetId": 1078911155,
+          "headers": [
+            "id_reseau",
+            "plateforme",
+            "url",
+            "statut"
+          ]
+        },
+        {
+          "name": "HISTORIQUE",
+          "sheetId": 1672550151,
+          "headers": [
+            "id_evenement",
+            "date",
+            "titre",
+            "description"
+          ]
+        },
+        {
+          "name": "COMPETITIONS_OFFICIELS",
+          "sheetId": 468109652,
+          "headers": [
+            "is_competition",
+            "nom_competition",
+            "type_competition",
+            "periodicite",
+            "discipline",
+            "categorie",
+            "description"
+          ]
+        },
+        {
+          "name": "CALENDRIER",
+          "sheetId": 187220973,
+          "headers": [
+            "id_periode",
+            "ordre",
+            "nom_periode",
+            "description",
+            "mois_debut",
+            "mois_fin"
+          ]
+        },
+        {
+          "name": "FONCTIONS",
+          "sheetId": 56455046,
+          "headers": [
+            "id_fonction",
+            "code_fonction",
+            "nom_fonction",
+            "departement",
+            "description",
+            "observations"
+          ]
+        },
+        {
+          "name": "TYPES_AFFILIATION",
+          "sheetId": 1792969123,
+          "headers": [
+            "id_type_affiliation",
+            "type_acteur",
+            "structure_cible",
+            "relation",
+            "affiliation_principale"
+          ]
+        },
+        {
+          "name": "TYPES_TRANSFERTS",
+          "sheetId": 1804253663,
+          "headers": [
+            "id",
+            "nom",
+            "description",
+            "observation"
+          ]
+        },
+        {
+          "name": "DOCUMENT_OFFICIEL",
+          "sheetId": 733156880,
+          "headers": [
+            "id_document",
+            "titre",
+            "types_document",
+            "version",
+            "date_publication"
+          ]
+        },
+        {
+          "name": "FORMATS_ID",
+          "sheetId": 476357371,
+          "headers": [
+            "objet",
+            "format_propose",
+            "exemple",
+            "description",
+            "observations"
+          ]
+        },
+        {
+          "name": "STATUTS_AFFILIATION",
+          "sheetId": 1704261107,
+          "headers": [
+            "id_statut_affiliation",
+            "nom_statut_affiliation",
+            "observations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "17iHT1BgkkTubISlbDOsFSdVScEbO5ifWyjRLqpUgL3c",
+      "title": "01_FEACO_STRUCTURE_TERRITORIALE",
+      "sheets": [
+        {
+          "name": "LIGUES",
+          "sheetId": 1081262552,
+          "headers": [
+            "id_ligue",
+            "nom_ligue",
+            "pseudo_ligue",
+            "email_ligue",
+            "id_province",
+            "statut",
+            "observations"
+          ]
+        },
+        {
+          "name": "ENTENTES",
+          "sheetId": 90784613,
+          "headers": [
+            "id_entente",
+            "code_entente",
+            "nom_entente",
+            "pseudo_entente",
+            "id_ligue",
+            "id_ville",
+            "email_entente",
+            "statut",
+            "observations"
+          ]
+        },
+        {
+          "name": "CLUBS",
+          "sheetId": 529432834,
+          "headers": [
+            "id_club",
+            "nom_club",
+            "id_categorie",
+            "id_sexe",
+            "date_affiliation",
+            "id_ville",
+            "id_entente",
+            "id_ligue",
+            "statut",
+            "observations",
+            "code_club"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1tzQVTioloQfbWjpcQzK5utLJLs5l3lUuO0z6s4x7FT8",
+      "title": "02_FEACO_ACTEURS",
+      "sheets": [
+        {
+          "name": "ATHLETES",
+          "sheetId": 325296645,
+          "headers": [
+            "id_athlete",
+            "id_national",
+            "id_wa",
+            "nom_complet",
+            "id_sexe",
+            "date_naissance",
+            "lieu_naissance",
+            "nationalite",
+            "telephone",
+            "email",
+            "adresse",
+            "numero_passeport",
+            "date_delivrance_passeport",
+            "date_expiration_passeport",
+            "statut",
+            "avatar_drive_id",
+            "avatar_drive_url",
+            "passeport_drive_id",
+            "passeport_drive_url"
+          ]
+        },
+        {
+          "name": "COACHS",
+          "sheetId": 2035659444,
+          "headers": [
+            "id_coach",
+            "id_national",
+            "id_wa",
+            "nom_complet",
+            "id_sexe",
+            "date_naissance",
+            "lieu_naissance",
+            "nationalite",
+            "id_niveau",
+            "telephone",
+            "email",
+            "adresse",
+            "numero_passeport",
+            "date_delivrance_passeport",
+            "date_expiration_passeport",
+            "statut",
+            "avatar_drive_id",
+            "avatar_drive_url",
+            "passeport_drive_id",
+            "passeport_drive_url"
+          ]
+        },
+        {
+          "name": "OFFICIELS",
+          "sheetId": 2080525778,
+          "headers": [
+            "id_officiel",
+            "id_national",
+            "id_wa",
+            "nom_complet",
+            "id_sexe",
+            "date_naissance",
+            "nationalite",
+            "lieu_naissance",
+            "telephone",
+            "email",
+            "adresse",
+            "numero_passeport",
+            "date_delivrance_passeport",
+            "date_expiration_passeport",
+            "statut",
+            "avatar_drive_id",
+            "avatar_drive_url",
+            "passeport_drive_id",
+            "passeport_drive_url"
+          ]
+        },
+        {
+          "name": "ARBITRES",
+          "sheetId": 1019892129,
+          "headers": [
+            "id_arbitre",
+            "id_national",
+            "id_wa",
+            "nom_complet",
+            "id_sexe",
+            "date_naissance",
+            "lieu_naissance",
+            "nationalite",
+            "id_grade_arbitre",
+            "telephone",
+            "email",
+            "adresse",
+            "numero_passeport",
+            "date_delivrance_passeport",
+            "date_expiration_passeport",
+            "date_affiliation",
+            "statut",
+            "avatar_drive_id",
+            "avatar_drive_url",
+            "passeport_drive_id",
+            "passeport_drive_url"
+          ]
+        },
+        {
+          "name": "MEDECINS",
+          "sheetId": 886934293,
+          "headers": [
+            "id_medecin",
+            "id_national",
+            "id_wa",
+            "nom_complet",
+            "id_sexe",
+            "date_naissance",
+            "lieu_naissance",
+            "nationalite",
+            "id_specialite",
+            "telephone",
+            "email",
+            "adresse",
+            "numero_passeport",
+            "date_delivrance_passeport",
+            "date_expiration_passeport",
+            "statut",
+            "avatar_drive_id",
+            "avatar_drive_url",
+            "passeport_drive_id",
+            "passeport_drive_url"
+          ]
+        },
+        {
+          "name": "AUTRES",
+          "sheetId": 1085214292,
+          "headers": [
+            "id_autre_acteur",
+            "nom_complet",
+            "id_sexe",
+            "date_naissance",
+            "nationalite",
+            "telephone",
+            "email",
+            "type_autre_acteur",
+            "statut",
+            "observations",
+            "avatar_drive_id",
+            "avatar_drive_url"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1Rn6H5V2_YHPgXJtHwlPRb2sA_WqMIHIZaXBbO8m0Uvs",
+      "title": "03_FEACO_AFFILIATIONS",
+      "sheets": [
+        {
+          "name": "ATHLETE_AFFILIATIONS",
+          "sheetId": 1155078274,
+          "headers": [
+            "id_affiliation_athlete",
+            "id_saison",
+            "id_athlete",
+            "id_club",
+            "date_debut",
+            "date_fin",
+            "id_statut_affiliation",
+            "observations"
+          ]
+        },
+        {
+          "name": "COACH_AFFILIATIONS",
+          "sheetId": 440359951,
+          "headers": [
+            "id_affiliation_coach",
+            "id_saison",
+            "id_coach",
+            "id_club",
+            "date_debut",
+            "date_fin",
+            "id_statut_affiliation",
+            "observations"
+          ]
+        },
+        {
+          "name": "MEDECIN_AFFILIATIONS",
+          "sheetId": 433657397,
+          "headers": [
+            "id_affiliation_medecin",
+            "id_saison",
+            "id_medecin",
+            "id_club",
+            "date_debut",
+            "date_fin",
+            "id_statut_affiliation",
+            "observations"
+          ]
+        },
+        {
+          "name": "ARBITRE_AFFECTATIONS",
+          "sheetId": 51880555,
+          "headers": [
+            "id_affectation",
+            "id_arbitre",
+            "id_federation",
+            "date_debut",
+            "date_fin",
+            "statut_affectation",
+            "observations"
+          ]
+        },
+        {
+          "name": "ARBITRES_GRADES",
+          "sheetId": 674351352,
+          "headers": [
+            "id_grade_affectation",
+            "id_arbitre",
+            "id_grade_arbitre",
+            "id_saison",
+            "date_debut",
+            "date_fin",
+            "statut",
+            "observations"
+          ]
+        },
+        {
+          "name": "MANDATS",
+          "sheetId": 702981554,
+          "headers": [
+            "id_mandat",
+            "id_acteur",
+            "id_type_acteur",
+            "id_fonction",
+            "id_type_structure",
+            "id_structure",
+            "id_saison",
+            "date_debut",
+            "date_fin",
+            "statut_mandat",
+            "observations"
+          ]
+        },
+        {
+          "name": "AUTRES_AFFILIATIONS",
+          "sheetId": 1043531234,
+          "headers": [
+            "id_affiliation",
+            "id_saison",
+            "id_autre_acteur",
+            "id_type_entite",
+            "id_entite",
+            "date_debut",
+            "date_fin",
+            "statut_affiliation",
+            "observations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1EX0IFNe4ivmjpZ3TmULbCjgGCMOhlVtMZ6XiF4Qmxak",
+      "title": "06_FEACO_COMPETITIONS",
+      "sheets": [
+        {
+          "name": "COMPETITIONS",
+          "sheetId": 0,
+          "headers": [
+            "id_competition",
+            "id_type_competition",
+            "id_saison",
+            "nom_competition",
+            "edition",
+            "niveau_competition",
+            "date_debut",
+            "date_fin",
+            "pays",
+            "ville",
+            "lieu",
+            "statut",
+            "observations"
+          ]
+        },
+        {
+          "name": "COMPETITIONS_EPREUVES",
+          "sheetId": 321101344,
+          "headers": [
+            "id_competition_epreuve",
+            "id_competition",
+            "id_epreuve",
+            "id_categorie_age",
+            "id_sexe",
+            "date_epreuve",
+            "statut",
+            "observations"
+          ]
+        },
+        {
+          "name": "COMPETITIONS_PARTICIPANTS",
+          "sheetId": 916818317,
+          "headers": [
+            "id_participation",
+            "id_competition_epreuve",
+            "id_athlete",
+            "type_entite_representee",
+            "id_entite_representee",
+            "numero_dossard",
+            "statut_participation",
+            "observations"
+          ]
+        },
+        {
+          "name": "COMPETITIONS_PHASES",
+          "sheetId": 1022094708,
+          "headers": [
+            "id_phase_competition",
+            "id_competition_epreuve",
+            "id_type_phase",
+            "numero_phase",
+            "numero_serie",
+            "date_phase",
+            "heure",
+            "observations"
+          ]
+        },
+        {
+          "name": "COMPETITIONS_RESULTATS",
+          "sheetId": 112101512,
+          "headers": [
+            "id_resultat",
+            "id_phase_competition",
+            "id_participation",
+            "numero_couloir",
+            "performance",
+            "id_statut_resultat",
+            "rang",
+            "qualification",
+            "vent",
+            "observations"
+          ]
+        },
+        {
+          "name": "RECORDS",
+          "sheetId": 793216239,
+          "headers": [
+            "id_record",
+            "id_type_record",
+            "id_epreuve",
+            "type_detenteur",
+            "id_detenteur",
+            "id_resultat_source",
+            "performance",
+            "date_record",
+            "pays",
+            "ville",
+            "statut_homologation",
+            "date_homologation",
+            "observations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1wrtqEaW5iaH2cJWCi0whp2d1wp0OxLffoojIiHjvgbs",
+      "title": "04_FEACO_ACTIVITES",
+      "sheets": [
+        {
+          "name": "ACTIVITES",
+          "sheetId": 0,
+          "headers": [
+            "id_activite",
+            "id_type_activite",
+            "id_entite_organisatrice",
+            "nom_activite",
+            "titre_public",
+            "resume",
+            "date_debut",
+            "date_fin",
+            "pays",
+            "ville",
+            "lieu",
+            "statut",
+            "observations"
+          ]
+        },
+        {
+          "name": "ACTIVITES_ENTITES",
+          "sheetId": 542879126,
+          "headers": [
+            "id_activite_entite",
+            "id_activite",
+            "id_entite",
+            "role_entite",
+            "statut_participation",
+            "observations"
+          ]
+        },
+        {
+          "name": "ACTIVITES_PARTICIPANTS",
+          "sheetId": 342044747,
+          "headers": [
+            "id_participation",
+            "id_activite",
+            "id_type_acteur",
+            "id_acteur",
+            "role_participation",
+            "statut_participation",
+            "observations"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "1oL6ATzjjIHMfC2ZdP60uF5JpOnkamV8JcCDbTEfiSSs",
+      "title": "05_FEACO_DOCUMENTS",
+      "sheets": [
+        {
+          "name": "DOCUMENTS",
+          "sheetId": 0,
+          "headers": [
+            "id_document",
+            "id_type_document",
+            "titre_document",
+            "numero_reference",
+            "date_document",
+            "date_reception",
+            "date_expiration",
+            "description",
+            "statut",
+            "observations"
+          ]
+        },
+        {
+          "name": "DOCUMENTS_FICHIERS",
+          "sheetId": 1691085192,
+          "headers": [
+            "id_fichier",
+            "id_document",
+            "nom_fichier",
+            "type_fichier",
+            "url_fichier",
+            "id_fichier_drive",
+            "date_ajout",
+            "observations"
+          ]
+        },
+        {
+          "name": "DOCUMENTS_RELATIONS",
+          "sheetId": 1530610518,
+          "headers": [
+            "id_relation_document",
+            "id_document",
+            "id_type_entite",
+            "id_entite",
+            "type_relation",
+            "observations"
+          ]
+        }
+      ]
+    }
+  ],
+  "formats": [
+    [
+      "objet",
+      "format_propose",
+      "exemple",
+      "description",
+      "observations"
+    ],
+    [
+      "SPORT",
+      "ATH",
+      "ATH",
+      "Code du sport athlétisme",
+      "Code SNDS"
+    ],
+    [
+      "DISCIPLINE",
+      "DIS###",
+      "DIS001",
+      "Identifiant de discipline FEACO",
+      "Conserver les codes existants"
+    ],
+    [
+      "LIGUE",
+      "##",
+      "01",
+      "Identifiant de ligue",
+      "Texte ; conserver les 26 codes existants"
+    ],
+    [
+      "ENTENTE",
+      "####",
+      "0101",
+      "Code ligue + code entente sur deux chiffres",
+      "Texte"
+    ],
+    [
+      "CLUB",
+      "#######",
+      "0101001",
+      "ID entente + code club sur trois chiffres",
+      "Pour les clubs rattachés à une entente ; cas sans entente à valider"
+    ],
+    [
+      "ATHLETE",
+      "ATH#####",
+      "ATH00001",
+      "Identifiant fédéral permanent de fiche",
+      "Distinct de id_wa et de tout numéro de licence"
+    ],
+    [
+      "ENTRAINEUR",
+      "COA#####",
+      "COA00001",
+      "Identifiant permanent de la fiche entraîneur"
+    ],
+    [
+      "EDITION_COMPETITION",
+      "ATH-COMP-AAAA-###",
+      "ATH-COMP-2026-001",
+      "Identifiant d’édition",
+      "Séquence annuelle ; ne pas renuméroter les anciennes lignes"
+    ]
+  ],
+  "events": [
+    [
+      "id_epreuve",
+      "id_discipline",
+      "nom_epreuve",
+      "id_type_resultat",
+      "unite_resultat",
+      "type_participation",
+      "observations"
+    ],
+    [
+      "EPR001",
+      "DIS001",
+      "100_M",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR002",
+      "DIS001",
+      "200_M",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR003",
+      "DIS001",
+      "400_M",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR004",
+      "DIS002",
+      "800_M",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR005",
+      "DIS002",
+      "1500_M",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR006",
+      "DIS002",
+      "5000_M",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR007",
+      "DIS002",
+      "10000_M",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR008",
+      "DIS003",
+      "100_M_HAIES",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR009",
+      "DIS003",
+      "110_M_HAIES",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR010",
+      "DIS003",
+      "400_M_HAIES",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR011",
+      "DIS003",
+      "3000_M_STEEPLE",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR012",
+      "DIS004",
+      "4X100_M",
+      "TR001",
+      "SECONDE",
+      "EQUIPE"
+    ],
+    [
+      "EPR013",
+      "DIS004",
+      "4X400_M",
+      "TR001",
+      "SECONDE",
+      "EQUIPE"
+    ],
+    [
+      "EPR014",
+      "DIS004",
+      "4X400_M_MIXTE",
+      "TR001",
+      "SECONDE",
+      "EQUIPE"
+    ],
+    [
+      "EPR015",
+      "DIS005",
+      "SAUT_EN_HAUTEUR",
+      "TR003",
+      "METRE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR016",
+      "DIS005",
+      "SAUT_A_LA_PERCHE",
+      "TR003",
+      "METRE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR017",
+      "DIS005",
+      "SAUT_EN_LONGUEUR",
+      "TR002",
+      "METRE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR018",
+      "DIS005",
+      "TRIPLE_SAUT",
+      "TR002",
+      "METRE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR019",
+      "DIS006",
+      "LANCER_DU_POIDS",
+      "TR002",
+      "METRE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR020",
+      "DIS006",
+      "LANCER_DU_DISQUE",
+      "TR002",
+      "METRE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR021",
+      "DIS006",
+      "LANCER_DU_MARTEAU",
+      "TR002",
+      "METRE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR022",
+      "DIS006",
+      "LANCER_DU_JAVELOT",
+      "TR002",
+      "METRE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR023",
+      "DIS007",
+      "DECATHLON",
+      "TR004",
+      "POINT",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR024",
+      "DIS007",
+      "HEPTATHLON",
+      "TR004",
+      "POINT",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR025",
+      "DIS008",
+      "10000_M_MARCHE",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR026",
+      "DIS008",
+      "20_KM_MARCHE",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR027",
+      "DIS008",
+      "35_KM_MARCHE",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR028",
+      "DIS009",
+      "5_KM_ROUTE",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR029",
+      "DIS009",
+      "10_KM_ROUTE",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR030",
+      "DIS009",
+      "SEMI_MARATHON",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR031",
+      "DIS009",
+      "MARATHON",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR032",
+      "DIS010",
+      "CROSS_COUNTRY",
+      "TR001",
+      "SECONDE",
+      "INDIVIDUEL"
+    ],
+    [
+      "EPR099",
+      "DIS099",
+      "AUTRE",
+      "",
+      "",
+      "",
+      "Precision obligatoire"
+    ]
+  ],
+  "leagues": [
+    [
+      "id_ligue",
+      "nom_ligue",
+      "pseudo_ligue"
+    ],
+    [
+      "01",
+      "LIGUE D'ATHLETISME DE KINSHASA"
+    ],
+    [
+      "02",
+      "LIGUE D'ATHLETISME DU KWANGO"
+    ],
+    [
+      "03",
+      "LIGUE D'ATHLETISME DU KONGO-CENTRAL"
+    ],
+    [
+      "04",
+      "LIGUE D'ATHLETISME DE L'EQUATEUR"
+    ],
+    [
+      "05",
+      "LIGUE D'ATHLETISME DE LA TSHOPO"
+    ],
+    [
+      "06",
+      "LIGUE D'ATHLETISME DU KASAI-CENTRAL"
+    ],
+    [
+      "07",
+      "LIGUE D'ATHLETISME DU KASAI-ORIENTAL"
+    ],
+    [
+      "08",
+      "LIGUE D'ATHLETISME DU SUD-KIVU"
+    ],
+    [
+      "09",
+      "LIGUE D'ATHLETISME DU HAUT-KATANGA"
+    ],
+    [
+      "10",
+      "LIGUE D'ATHLETISME DU NORD-KIVU"
+    ],
+    [
+      "11",
+      "LIGUE D'ATHLETISME DU MANIEMA"
+    ],
+    [
+      "12",
+      "LIGUE D'ATHLETISME DU LUALABA"
+    ],
+    [
+      "13",
+      "LIGUE D'ATHLETISME DU KASAI"
+    ],
+    [
+      "14",
+      "LIGUE D'ATHLETISME DU TANGANYIKA"
+    ],
+    [
+      "15",
+      "LIGUE D'ATHLETISME DU HAUT-LOMANI"
+    ],
+    [
+      "16",
+      "LIGUE D'ATHLETISME DE LA LOMAMI"
+    ],
+    [
+      "17",
+      "LIGUE D'ATHLETISME DU TSHUAPA"
+    ],
+    [
+      "18",
+      "LIGUE D'ATHLETISME DU HAUT-UELE"
+    ],
+    [
+      "19",
+      "LIGUE D'ATHLETISME DU BAS-UELE"
+    ],
+    [
+      "20",
+      "LIGUE D'ATHLETISME DU KWILU"
+    ],
+    [
+      "21",
+      "LIGUE D'ATHLETISME DU NORD-UBANGI"
+    ],
+    [
+      "22",
+      "LIGUE D'ATHLETISME DU BAS-UBANGI"
+    ],
+    [
+      "23",
+      "LIGUE D'ATHLETISME DU MAI-NDOMBE"
+    ],
+    [
+      "24",
+      "LIGUE D'ATHLETISME DE LA MONGALA"
+    ],
+    [
+      "25",
+      "LIGUE D'ATHLETISME DE L'ITURI"
+    ],
+    [
+      "26",
+      "LIGUE D'ATHLETISME DU SANKURU"
+    ]
+  ]
+}

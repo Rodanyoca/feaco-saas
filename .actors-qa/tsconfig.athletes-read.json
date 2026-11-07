@@ -1,0 +1,21 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "incremental": false
+  },
+  "include": [
+    "../app/athletes/page.tsx",
+    "../app/api/athletes/**/*.ts",
+    "../components/athletes/athletes-read-client.tsx",
+    "../components/athletes/athlete-read-detail.tsx",
+    "../lib/athlete-read-domain.ts",
+    "../lib/athletes-sheets-read.ts",
+    "../node_modules/next/image-types/global.d.ts"
+  ],
+  "exclude": [
+    "../node_modules",
+    "../.next*",
+    "./preview",
+    "./preview-run"
+  ]
+}

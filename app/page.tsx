@@ -1,0 +1,70 @@
+import { DashboardLayout } from "@/components/dashboard/dashboard-layout"
+import { Header } from "@/components/dashboard/header"
+import { AnalyticsTable, DashboardSection, StatGrid, StatValue, StatusText } from "@/components/dashboard/analytics"
+import { DashboardRefreshButton } from "@/components/dashboard/dashboard-refresh-button"
+import { getArbitres, getAthletes, getClubs, getCoachs, getCompetitionParticipants, getCompetitionResults, getCompetitions, getEntentes, getEquipeNationale, getEquipeNationaleResultats, getEquipeNationaleSelections, getLigues, getMedecins, getOfficiels } from "@/lib/data"
+import { getArbitreLicences, getAthleteAffiliations, getAthleteLicences, getCoachAffiliations, getCoachLicences, getMedecinAffiliations, getMedecinLicences, getOfficielAffiliations, getOfficielLicences } from "@/lib/actor-records"
+import { loadActivities } from "@/lib/activities"
+import { loadDocuments } from "@/lib/documents"
+import { normalizeMetricValue, isMetricActive, isMetricDone, isDateExpired } from "@/lib/dashboard-metrics"
+
+export const runtime = "nodejs"
+export const dynamic = "force-dynamic"
+const safe = async <T,>(promise: Promise<T>, fallback: T) => { try { return await promise } catch { return fallback } }
+const statusSummary = <T extends { statut?: string }>(rows: T[]) => { const active = rows.filter((row) => isMetricActive(row.statut)).length; const inactive = rows.filter((row) => isMetricDone(row.statut) || normalizeMetricValue(row.statut).includes("inactif")).length; return { total: rows.length, active, inactive, unknown: rows.length - active - inactive } }
+const percent = (value: number, total: number) => total ? Math.round(value * 100 / total) : 0
+const hasValue = (value: unknown) => Boolean(String(value ?? "").trim())
+const completionRow = (label: string, total: number, complete: number) => ({
+  label,
+  total,
+  complete,
+  incomplete: total - complete,
+  rate: `${percent(complete, total)} %`,
+})
+
+export default async function DashboardPage() {
+  const refreshIso = new Date().toISOString()
+  const refreshedAt = new Intl.DateTimeFormat("fr-FR", { dateStyle: "short", timeStyle: "medium", timeZone: "Africa/Kinshasa" }).format(new Date(refreshIso))
+  const [ligues, ententes, clubs, athletes, coachs, arbitres, medecins, officiels, competitions, competitionParticipants, competitionResults, nationalTeams, nationalSelections, nationalResults, athleteAffiliations, coachAffiliations, medecinAffiliations, officielAffiliations, athleteLicences, coachLicences, arbitreLicences, medecinLicences, officielLicences, activityBundle, documentBundle] = await Promise.all([
+    safe(getLigues(), []), safe(getEntentes(), []), safe(getClubs(), []), safe(getAthletes(), []), safe(getCoachs(), []), safe(getArbitres(), []), safe(getMedecins(), []), safe(getOfficiels(), []), safe(getCompetitions(), []), safe(getCompetitionParticipants(), []), safe(getCompetitionResults(), []), safe(getEquipeNationale(), []), safe(getEquipeNationaleSelections(), []), safe(getEquipeNationaleResultats(), []), safe(getAthleteAffiliations(), []), safe(getCoachAffiliations(), []), safe(getMedecinAffiliations(), []), safe(getOfficielAffiliations(), []), safe(getAthleteLicences(), []), safe(getCoachLicences(), []), safe(getArbitreLicences(), []), safe(getMedecinLicences(), []), safe(getOfficielLicences(), []), safe(loadActivities(), { activities: [], typeOptions: [] }), safe(loadDocuments(), { documents: [], typeOptions: [] }),
+  ])
+  const structures = [ligues, ententes, clubs]
+  const actors = [athletes, coachs, arbitres, officiels, medecins]
+  const totalStructures = structures.reduce((sum, rows) => sum + rows.length, 0)
+  const totalActors = actors.reduce((sum, rows) => sum + rows.length, 0)
+  const affiliations = [...athleteAffiliations, ...coachAffiliations, ...medecinAffiliations, ...officielAffiliations]
+  const completeActors = actors.flat().filter((actor) => [actor.nomComplet, actor.dateNaissance, actor.genre, actor.email, actor.telephone].every(hasValue)).length
+  const actorCompletionRate = percent(completeActors, totalActors)
+  const activeAffiliations = affiliations.filter((item) => isMetricActive(item.statutAffiliation)).length
+  const inactiveAffiliations = affiliations.filter((item) => isMetricDone(item.statutAffiliation) || normalizeMetricValue(item.statutAffiliation).includes("inactif")).length
+  const licences = [...athleteLicences, ...coachLicences, ...arbitreLicences, ...medecinLicences, ...officielLicences]
+  const actorRows = [["Athlètes", athletes], ["Entraîneurs", coachs], ["Arbitres", arbitres], ["Officiels", officiels], ["Médecins", medecins]].map(([label, source]) => { const rows = source as typeof athletes; const men = rows.filter((row) => ["m", "masculin", "homme"].includes(normalizeMetricValue(row.genre))).length; const women = rows.filter((row) => ["f", "feminin", "femme"].includes(normalizeMetricValue(row.genre))).length; const active = rows.filter((row) => isMetricActive(row.statut)).length; return { label: String(label), total: rows.length, men, women, active, inactive: rows.length - active } })
+  const territorialRows = [["Ligues", ligues], ["Ententes", ententes], ["Clubs", clubs]].map(([label, source]) => { const summary = statusSummary(source as Array<{ statut?: string }>); return { label: String(label), ...summary, share: `${percent(summary.total, totalStructures)} %` } })
+  const licenceRows = [["Athlètes", athleteLicences], ["Entraîneurs", coachLicences], ["Arbitres", arbitreLicences], ["Médecins", medecinLicences], ["Officiels", officielLicences]].map(([label, source]) => { const rows = source as typeof athleteLicences; const expired = rows.filter((row) => isDateExpired(row.dateFinValidite)).length; return { label: String(label), total: rows.length, active: rows.filter((row) => isMetricActive(row.statutLicence) && !isDateExpired(row.dateFinValidite)).length, expired } })
+  const activityRows = [...activityBundle.activities].sort((a, b) => b.startDate.localeCompare(a.startDate)).slice(0, 5).map((item) => ({ id: item.id, label: item.name, type: item.type, date: item.startDate || "—", statut: item.status || "Non renseigné" }))
+  const documentRows = [...documentBundle.documents].sort((a, b) => b.documentDate.localeCompare(a.documentDate)).slice(0, 5).map((item) => ({ id: item.id, label: item.title, type: item.type, date: item.documentDate || "—", statut: item.status || "Non renseigné" }))
+  const completeStructures = structures.flat().filter((item) => [item.id, item.nom, item.statut].every(hasValue)).length
+  const completeAffiliations = affiliations.filter((item) => [item.idAffiliation, item.actorId, item.idStructure, item.dateDebut, item.statutAffiliation].every(hasValue)).length
+  const completeLicences = licences.filter((item) => [item.idLicence, item.actorId, item.numeroLicence, item.dateDelivrance, item.statutLicence].every(hasValue)).length
+  const affiliationLicenceTotal = affiliations.length + licences.length
+  const completionRows = [
+    completionRow("Structures territoriales", totalStructures, completeStructures),
+    completionRow("Acteurs", totalActors, completeActors),
+    completionRow("Affiliations et licences", affiliationLicenceTotal, completeAffiliations + completeLicences),
+    completionRow("Compétitions", competitions.length, competitions.filter((item) => [item.idCompetition, item.nomCompetition, item.saison, item.dateDebut, item.dateFin, item.statutCompetition].every(hasValue)).length),
+    completionRow("Équipes nationales", nationalTeams.length, nationalTeams.filter((item) => [item.idEquipeNationale, item.nomEquipeNationale, item.discipline, item.categorie, item.genre, item.statutEquipe].every(hasValue)).length),
+    completionRow("Activités", activityBundle.activities.length, activityBundle.activities.filter((item) => [item.id, item.typeId, item.name, item.startDate, item.status].every(hasValue)).length),
+    completionRow("Documents", documentBundle.documents.length, documentBundle.documents.filter((item) => [item.id, item.typeId, item.title, item.documentDate, item.status].every(hasValue)).length),
+  ]
+  const alerts = [{ label: "Athlètes sans club", count: athletes.filter((item) => !item.clubId && !item.clubNom).length }, { label: "Clubs sans statut", count: clubs.filter((item) => !item.statut).length }, { label: "Licences expirées", count: licences.filter((item) => isDateExpired(item.dateFinValidite)).length }, { label: "Documents sans fichier", count: documentBundle.documents.filter((item) => !item.fileId).length }, { label: "Activités sans statut", count: activityBundle.activities.filter((item) => !item.status).length }]
+
+  return <DashboardLayout><Header title="Tableau de bord" subtitle="Référentiel fédéral, structures, acteurs, compétitions et administration" /><main className="flex-1 space-y-8 p-4 md:p-6"><div className="flex flex-wrap items-center justify-between gap-3 border-b pb-4"><p className="text-sm text-muted-foreground">Dernière actualisation : <time dateTime={refreshIso} className="font-medium text-foreground">{refreshedAt}</time></p><DashboardRefreshButton /></div>
+    <DashboardSection title="Synthèse générale"><StatGrid><StatValue label="Structures territoriales" value={totalStructures.toLocaleString("fr-FR")} detail="Ligues, ententes et clubs" /><StatValue label="Acteurs enregistrés" value={totalActors.toLocaleString("fr-FR")} detail="Toutes les familles d’acteurs" /><StatValue label="Compétitions" value={competitions.length.toLocaleString("fr-FR")} detail={`${competitionParticipants.length} participations enregistrées`} /><StatValue label="Complétude des acteurs" value={`${actorCompletionRate} %`} detail={`${completeActors} fiches complètes sur ${totalActors}`} /><StatValue label="Affiliations" value={affiliations.length.toLocaleString("fr-FR")} detail={`${activeAffiliations} actives · ${inactiveAffiliations} inactives`} /><StatValue label="Résultats de compétitions" value={competitionResults.length.toLocaleString("fr-FR")} /><StatValue label="Équipes nationales" value={nationalTeams.length.toLocaleString("fr-FR")} detail={`${nationalSelections.length} membres sélectionnés`} /><StatValue label="Résultats nationaux" value={nationalResults.length.toLocaleString("fr-FR")} /></StatGrid></DashboardSection>
+    <DashboardSection title="Référentiel territorial" description="État des structures enregistrées dans FEACO."><AnalyticsTable rows={territorialRows} columns={[{ key: "label", label: "Niveau territorial" }, { key: "total", label: "Total", align: "right" }, { key: "active", label: "Actif", align: "right" }, { key: "inactive", label: "Inactif", align: "right" }, { key: "unknown", label: "Statut non renseigné", align: "right" }, { key: "share", label: "Part du total", align: "right" }]} /></DashboardSection>
+    <DashboardSection title="Référentiel des acteurs"><AnalyticsTable rows={actorRows} columns={[{ key: "label", label: "Type d’acteur" }, { key: "total", label: "Total", align: "right" }, { key: "men", label: "Hommes", align: "right" }, { key: "women", label: "Femmes", align: "right" }, { key: "active", label: "Actifs", align: "right" }, { key: "inactive", label: "Autres statuts", align: "right" }]} /></DashboardSection>
+    <DashboardSection title="Affiliations et licences" description="Répartition des licences par famille d’acteurs."><StatGrid><StatValue label="Affiliations" value={affiliations.length} /><StatValue label="Licences" value={licences.length} /><StatValue label="Licences actives" value={licences.filter((item) => isMetricActive(item.statutLicence) && !isDateExpired(item.dateFinValidite)).length} /><StatValue label="Licences expirées" value={licences.filter((item) => isDateExpired(item.dateFinValidite)).length} /></StatGrid><AnalyticsTable rows={licenceRows} columns={[{ key: "label", label: "Famille" }, { key: "total", label: "Licences", align: "right" }, { key: "active", label: "Actives", align: "right" }, { key: "expired", label: "Expirées", align: "right" }]} /></DashboardSection>
+    <DashboardSection title="Compétitions et équipes nationales"><StatGrid><StatValue label="Compétitions" value={competitions.length} /><StatValue label="Prévues" value={competitions.filter((item) => normalizeMetricValue(item.statutCompetition).includes("planifi")).length} /><StatValue label="Terminées" value={competitions.filter((item) => isMetricDone(item.statutCompetition)).length} /><StatValue label="Équipes nationales" value={nationalTeams.length} /></StatGrid></DashboardSection>
+    <div className="grid gap-8 xl:grid-cols-2"><DashboardSection title="Activités récentes"><AnalyticsTable rows={activityRows} columns={[{ key: "label", label: "Activité" }, { key: "type", label: "Type" }, { key: "date", label: "Date" }, { key: "statut", label: "Statut" }]} /></DashboardSection><DashboardSection title="Documents récents"><AnalyticsTable rows={documentRows} columns={[{ key: "label", label: "Document" }, { key: "type", label: "Type" }, { key: "date", label: "Date" }, { key: "statut", label: "Statut" }]} /></DashboardSection></div>
+    <DashboardSection title="Qualité des données" description="Complétude des sept blocs métier et points nécessitant une vérification administrative."><h3 className="text-base font-medium">Complétude par bloc</h3><AnalyticsTable rows={completionRows} columns={[{ key: "label", label: "Bloc métier" }, { key: "total", label: "Fiches", align: "right" }, { key: "complete", label: "Complètes", align: "right" }, { key: "incomplete", label: "Incomplètes", align: "right" }, { key: "rate", label: "Taux", align: "right", render: (row) => <StatusText level={Number(row.incomplete) ? "warning" : "good"}>{String(row.rate)}</StatusText> }]} /><h3 className="pt-2 text-base font-medium">Points d’attention</h3><AnalyticsTable rows={alerts} columns={[{ key: "label", label: "Point d’attention" }, { key: "count", label: "Nombre", align: "right", render: (row) => <StatusText level={Number(row.count) ? "warning" : "good"}>{String(row.count)}</StatusText> }]} /></DashboardSection>
+  </main></DashboardLayout>
+}

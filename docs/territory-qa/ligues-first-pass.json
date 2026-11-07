@@ -1,0 +1,18 @@
+{
+  "checks": [
+    "API test : 26 ligues, codes 01-26 et statuts vides",
+    "API test : ententes vide",
+    "API test : clubs vide",
+    "API : origine externe refusee avant mutation",
+    "UI ligues : recherche, vide, pagination 50 et 26 lignes visibles",
+    "UI ligue : fiche, statut vide et modification simulee avec ID 01 conserve"
+  ],
+  "screenshots": [
+    "ligues-desktop.png"
+  ],
+  "errors": [],
+  "simulatedWrites": 0,
+  "source": "test",
+  "failure": "locator.click: Error: strict mode violation: getByLabel('Ligue') resolved to 2 elements:\n    1) <button dir=\"ltr\" type=\"button\" role=\"combobox\" aria-label=\"Ligue\" data-state=\"closed\" data-size=\"default\" aria-expanded=\"false\" aria-autocomplete=\"none\" data-slot=\"select-trigger\" aria-controls=\"radix-_R_67ld5esndlb_\" class=\"border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive dark:bg-input/30 d…>…</button> aka getByLabel('Ligue', { exact: true })\n    2) <button dir=\"ltr\" type=\"button\" role=\"combobox\" data-state=\"closed\" data-placeholder=\"\" data-size=\"default\" aria-required=\"true\" aria-expanded=\"false\" aria-autocomplete=\"none\" data-slot=\"select-trigger\" aria-controls=\"radix-_r_7_\" id=\"_R_2ld5esndlb_-idLigue\" class=\"border-input data-[placeholder]:text-muted-foreground [&_svg:not([class*='text-'])]:text-muted-foreground focus-visible:border-ring focus-visible:ring-ring/50 aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-inval…>…</button> aka getByRole('combobox', { name: 'Ligue *' })\n\nCall log:\n\u001b[2m  - waiting for getByLabel('Ligue')\u001b[22m\n",
+  "alerts": []
+}

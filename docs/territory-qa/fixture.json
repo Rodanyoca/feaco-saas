@@ -1,0 +1,370 @@
+{
+  "ligues": [
+    {
+      "id_ligue": "01",
+      "nom_ligue": "LIGUE D'ATHLETISME DE KINSHASA",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO01",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "02",
+      "nom_ligue": "LIGUE D'ATHLETISME DU KWANGO",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO02",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "03",
+      "nom_ligue": "LIGUE D'ATHLETISME DU KONGO-CENTRAL",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO03",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "04",
+      "nom_ligue": "LIGUE D'ATHLETISME DE L'EQUATEUR",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO04",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "05",
+      "nom_ligue": "LIGUE D'ATHLETISME DE LA TSHOPO",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO05",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "06",
+      "nom_ligue": "LIGUE D'ATHLETISME DU KASAI-CENTRAL",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO06",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "07",
+      "nom_ligue": "LIGUE D'ATHLETISME DU KASAI-ORIENTAL",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO07",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "08",
+      "nom_ligue": "LIGUE D'ATHLETISME DU SUD-KIVU",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO08",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "09",
+      "nom_ligue": "LIGUE D'ATHLETISME DU HAUT-KATANGA",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO09",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "10",
+      "nom_ligue": "LIGUE D'ATHLETISME DU NORD-KIVU",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO10",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "11",
+      "nom_ligue": "LIGUE D'ATHLETISME DU MANIEMA",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO11",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "12",
+      "nom_ligue": "LIGUE D'ATHLETISME DU LUALABA",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO12",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "13",
+      "nom_ligue": "LIGUE D'ATHLETISME DU KASAI",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO13",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "14",
+      "nom_ligue": "LIGUE D'ATHLETISME DU TANGANYIKA",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO14",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "15",
+      "nom_ligue": "LIGUE D'ATHLETISME DU HAUT-LOMANI",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO15",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "16",
+      "nom_ligue": "LIGUE D'ATHLETISME DE LA LOMAMI",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO16",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "17",
+      "nom_ligue": "LIGUE D'ATHLETISME DU TSHUAPA",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO17",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "18",
+      "nom_ligue": "LIGUE D'ATHLETISME DU HAUT-UELE",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO18",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "19",
+      "nom_ligue": "LIGUE D'ATHLETISME DU BAS-UELE",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO19",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "20",
+      "nom_ligue": "LIGUE D'ATHLETISME DU KWILU",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO20",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "21",
+      "nom_ligue": "LIGUE D'ATHLETISME DU NORD-UBANGI",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO21",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "22",
+      "nom_ligue": "LIGUE D'ATHLETISME DU BAS-UBANGI",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO22",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "23",
+      "nom_ligue": "LIGUE D'ATHLETISME DU MAI-NDOMBE",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO23",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "24",
+      "nom_ligue": "LIGUE D'ATHLETISME DE LA MONGALA",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO24",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "25",
+      "nom_ligue": "LIGUE D'ATHLETISME DE L'ITURI",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO25",
+      "statut": "",
+      "observations": ""
+    },
+    {
+      "id_ligue": "26",
+      "nom_ligue": "LIGUE D'ATHLETISME DU SANKURU",
+      "pseudo_ligue": "",
+      "email_ligue": "",
+      "id_province": "PRO26",
+      "statut": "",
+      "observations": ""
+    }
+  ],
+  "ententes": [],
+  "clubs": [],
+  "provinces": [
+    {
+      "id_province": "PRO01",
+      "nom_province": "KINSHASA"
+    },
+    {
+      "id_province": "PRO02",
+      "nom_province": "KWANGO"
+    },
+    {
+      "id_province": "PRO03",
+      "nom_province": "KONGO-CENTRAL"
+    },
+    {
+      "id_province": "PRO04",
+      "nom_province": "EQUATEUR"
+    },
+    {
+      "id_province": "PRO05",
+      "nom_province": "TSHOPO"
+    },
+    {
+      "id_province": "PRO06",
+      "nom_province": "KASAI-CENTRAL"
+    },
+    {
+      "id_province": "PRO07",
+      "nom_province": "KASAI-ORIENTAL"
+    },
+    {
+      "id_province": "PRO08",
+      "nom_province": "SUD-KIVU"
+    },
+    {
+      "id_province": "PRO09",
+      "nom_province": "HAUT-KATANGA"
+    },
+    {
+      "id_province": "PRO10",
+      "nom_province": "NORD-KIVU"
+    },
+    {
+      "id_province": "PRO11",
+      "nom_province": "MANIEMA"
+    },
+    {
+      "id_province": "PRO12",
+      "nom_province": "LUALABA"
+    },
+    {
+      "id_province": "PRO13",
+      "nom_province": "KASAI"
+    },
+    {
+      "id_province": "PRO14",
+      "nom_province": "TANGANYIKA"
+    },
+    {
+      "id_province": "PRO15",
+      "nom_province": "HAUT-LOMANI"
+    },
+    {
+      "id_province": "PRO16",
+      "nom_province": "LOMAMI"
+    },
+    {
+      "id_province": "PRO17",
+      "nom_province": "TSHUAPA"
+    },
+    {
+      "id_province": "PRO18",
+      "nom_province": "HAUT-UELE"
+    },
+    {
+      "id_province": "PRO19",
+      "nom_province": "BAS-UELE"
+    },
+    {
+      "id_province": "PRO20",
+      "nom_province": "KWILU"
+    },
+    {
+      "id_province": "PRO21",
+      "nom_province": "NORD-UBANGI"
+    },
+    {
+      "id_province": "PRO22",
+      "nom_province": "BAS-UBANGI"
+    },
+    {
+      "id_province": "PRO23",
+      "nom_province": "MAI-NDOMBE"
+    },
+    {
+      "id_province": "PRO24",
+      "nom_province": "MONGALA"
+    },
+    {
+      "id_province": "PRO25",
+      "nom_province": "ITURI"
+    },
+    {
+      "id_province": "PRO26",
+      "nom_province": "SANKURU"
+    }
+  ],
+  "categories": [
+    {
+      "id_categorie_club": "CCL099",
+      "nom_categorie_club": "AUTRE",
+      "observations": "Precision obligatoire"
+    }
+  ],
+  "sexes": [
+    {
+      "id_sexe": "SEX001",
+      "nom_sexe": "MASCULIN",
+      "observations": ""
+    },
+    {
+      "id_sexe": "SEX002",
+      "nom_sexe": "FEMININ",
+      "observations": ""
+    },
+    {
+      "id_sexe": "SEX099",
+      "nom_sexe": "AUTRE",
+      "observations": "Precision obligatoire"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "checks": [
+    "API test : 26 ligues, codes 01-26 et statuts vides",
+    "API test : ententes vide",
+    "API test : clubs vide",
+    "API : origine externe refusee avant mutation",
+    "UI entente : etat vide, creation et modification simulees, parent/code verrouilles"
+  ],
+  "screenshots": [],
+  "errors": [],
+  "interceptedWrites": 0,
+  "source": "test",
+  "failure": "apiRequestContext.get: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - → GET http://127.0.0.1:3016/api/clubs\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/156.0.8078.4 Safari/537.36\u001b[22m\n\u001b[2m    - accept: */*\u001b[22m\n\u001b[2m    - accept-encoding: gzip,deflate,br\u001b[22m\n\u001b[2m    - cookie: __next_hmr_refresh_hash__=8ac9737c40b593bc7d27ea735b35c937633457081244afec\u001b[22m\n",
+  "alerts": [
+    ""
+  ]
+}

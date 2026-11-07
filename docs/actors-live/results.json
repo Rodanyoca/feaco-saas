@@ -1,0 +1,10 @@
+{
+  "route": "/athletes",
+  "source": "FEACO_ATHLETES",
+  "rows": 0,
+  "demo": false,
+  "nationalIdentifierExposed": false,
+  "writes": 0,
+  "affiliationsRequested": 0,
+  "mobileOverflow": false
+}
